@@ -1,8 +1,14 @@
 #include <iostream>
 #include <limits>
+#include "Contact.h"
 
 int main() {
 
+    Contact contactA { Contact( (new std::string { "Eli" }), 25 ) };
+    Contact contactB { Contact( (new std::string { "Vincent" }), 23 ) };
+
+    contactA.addFriend(&contactB);
+    contactA.removeFriend("Vincent");
     // create the vector of Contact pointers
     // instantiate a ContactUtility object
 

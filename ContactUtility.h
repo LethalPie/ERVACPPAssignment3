@@ -12,6 +12,8 @@ public:
     void addFriend(std::vector<Contact*>& contacts);
     void printFriends(std::vector<Contact*>& contacts);
     void deleteContact(std::vector<Contact*>& contacts);
+
+    friend class Contact;
 };
 
 #endif //ASSIGNMENT_3_CONTACTUTILITY_H
