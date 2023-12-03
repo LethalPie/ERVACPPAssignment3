@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Eliph/Desktop/CPLUSPLUS/ERVACPPAssignment3
+# Install script for directory: C:/Users/vjda0/eli_vj_cppAss3/ERVACPPAssignment3
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Eliph/Desktop/CPLUSPLUS/ERVACPPAssignment3/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/vjda0/eli_vj_cppAss3/ERVACPPAssignment3/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

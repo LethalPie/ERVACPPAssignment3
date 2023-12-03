@@ -2,8 +2,9 @@
 
 
 void sortContacts(std::vector<Contact*>& contacts) {
-   std::sort(*contacts.begin());
-
+    std::sort(contacts.begin(), contacts.end(),  {
+            return *a->m_name < *b->m_name;
+    });
 }
 
 void addContact(std::vector<Contact*>& contacts) {
