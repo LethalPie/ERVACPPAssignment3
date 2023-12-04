@@ -1,16 +1,18 @@
-#include <iostream>
-#include <limits>
-#include "Contact.h"
+#include "ContactUtility.h"
 
 int main() {
 
-    Contact contactA { Contact( (new std::string { "Eli" }), 25 ) };
-    Contact contactB { Contact( (new std::string { "Vincent" }), 23 ) };
+//    Contact contactA { Contact( (new std::string { "Eli" }), 25 ) };
+//    Contact contactB { Contact( (new std::string { "Vincent" }), 23 ) };
+//
+//    contactA.addFriend(&contactB);
+//    contactA.removeFriend("Vincent");
 
-    contactA.addFriend(&contactB);
-    contactA.removeFriend("Vincent");
     // create the vector of Contact pointers
+    std::vector<Contact*> contacts;
+
     // instantiate a ContactUtility object
+    ContactUtility contactUtility;
 
     int userOption {};
 
@@ -26,8 +28,27 @@ int main() {
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
         switch (userOption) {
-            // set up the switch to call the appropriate ContactUtility method
+            case 1: // Show contacts
+                contactUtility.printContacts(contacts);
+                break;
+            case 2:// Add contact
+                contactUtility.addContact(contacts);
+                break;
+            case 3: // Add friend
+                contactUtility.addFriend(contacts);
+                break;
+            case 4: // Print friends
+                contactUtility.printFriends(contacts);
+                break;
+            case 5: // Delete contact
+                contactUtility.deleteContact(contacts);
+                break;
+            case 6:
+                std::cout << "Quiting program.\n";
+                return 0;
+            default:
+                std::cout << "Error.\n";
+                break;
         }
-
     }
 }

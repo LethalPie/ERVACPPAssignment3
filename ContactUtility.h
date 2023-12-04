@@ -6,14 +6,13 @@
 class ContactUtility {
 private:
     void sortContacts(std::vector<Contact*>& contacts);
+    Contact* findContact(std::vector<Contact*>& contacts);
 public:
     void addContact(std::vector<Contact*>& contacts);
     void printContacts(std::vector<Contact*>& contacts);
     void addFriend(std::vector<Contact*>& contacts);
     void printFriends(std::vector<Contact*>& contacts);
     void deleteContact(std::vector<Contact*>& contacts);
-
-    friend class Contact;
 };
 
 #endif //ASSIGNMENT_3_CONTACTUTILITY_H
