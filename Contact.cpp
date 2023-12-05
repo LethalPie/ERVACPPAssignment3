@@ -1,4 +1,3 @@
-#include <iostream>
 #include "Contact.h"
 
 Contact::Contact(std::string *name, int age): m_name { name }, m_age { age } { }
