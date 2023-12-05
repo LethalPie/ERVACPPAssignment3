@@ -1,9 +1,7 @@
 #include <iostream>
 #include "Contact.h"
 
-Contact::Contact(std::string *name, int age): m_name { name }, m_age { age } {
-
-}
+Contact::Contact(std::string *name, int age): m_name { name }, m_age { age } { }
 
 void Contact::addFriend(Contact* newFriend) {
     m_friends.push_back(newFriend);
@@ -11,12 +9,14 @@ void Contact::addFriend(Contact* newFriend) {
 }
 
 void Contact::removeFriend(std::string_view friendName) {
+    int preSize = m_friends.size();
+    m_friends.erase(std::remove_if(m_friends.begin(),
+                                   m_friends.end(),
+                                   [&friendName](Contact* c) { return *c->m_name == friendName; }),
+                    m_friends.end());
 
-    auto checkFriend = [&friendName](Contact* c) { return *c->m_name == friendName; };
-    if (auto it = std::find_if(begin(m_friends), end(m_friends), checkFriend); it != std::end(m_friends)) {
-        //TODO: remove friend from list
-        std::cout << "Removed " << friendName << ".\n";
-    } else {
-        std::cout << "Count not find " << friendName << " in friend list.\n";
-    }
+    if (preSize == m_friends.size())
+        std::cout << "Friend not found\n";
+    else
+        std::cout << "Friend removed.\n";
 }
