@@ -26,15 +26,18 @@ void ContactUtility::printContacts(std::vector<Contact*>& contacts) {
 
 void ContactUtility::addFriend(std::vector<Contact*>& contacts) {
 
-    std::cout << "Contact that wants to add ('quit' to go back to main menu): ";
+    std::cout << "Contact that wants to add: ";
     Contact* conAPtr {findContact(contacts)};
     if (!conAPtr) return;
 
-    std::cout << "Who would you like to add? ('quit' to go back to main menu): ";
+    std::cout << "Who would " << *conAPtr->m_name << " like to add?: ";
     Contact* conFPtr {findContact(contacts)};
     if (!conFPtr) return;
 
     conAPtr->addFriend(conFPtr);
+
+    std::cout << *conFPtr->m_name << " added to " << *conAPtr->m_name << "'s friend list.";
+
 }
 
 void ContactUtility::printFriends(std::vector<Contact*>& contacts) {
@@ -67,7 +70,30 @@ void ContactUtility::printFriends(std::vector<Contact*>& contacts) {
 
 void ContactUtility::deleteContact(std::vector<Contact*>& contacts) {
 
-    
+    std::cout << "Which contact would you like to delete?: ";
+    Contact* conDPtr {findContact(contacts)};
+    if (!conDPtr) return;
+
+    std::cout << "Removing from friend lists...\n";
+    std::for_each(contacts.begin(),
+                  contacts.end(),
+                  [&conDPtr](Contact *c){
+        c->removeFriend(*conDPtr->m_name);
+    });
+
+    std::cout << "Removing from Contacts...\n";
+    contacts.erase(std::remove_if(contacts.begin(),
+                                  contacts.end(),
+                                   [&conDPtr](Contact* c) { return c == conDPtr; }),
+                   contacts.end());
+
+    // Memory clean up.
+    delete conDPtr->m_name;
+    conDPtr->m_name = nullptr;
+    delete conDPtr;
+    conDPtr = nullptr;
+
+    std::cout << "Contact deleted.\n";
 }
 
 Contact* ContactUtility::findContact(std::vector<Contact*>& contacts) {
@@ -75,16 +101,13 @@ Contact* ContactUtility::findContact(std::vector<Contact*>& contacts) {
     // Helper function to find contacts
     std::string conCheck;
     std::cin >> conCheck;
-    while (conCheck != "quit") {
-        auto it = std::find_if(contacts.begin(),
-                               contacts.end(),
-                               [&conCheck] (Contact *c) { return *c->m_name == conCheck;});
+    auto it = std::find_if(contacts.begin(),
+                           contacts.end(),
+                           [&conCheck] (Contact *c) { return *c->m_name == conCheck;});
 
-        if (it != std::end(contacts))
-            return contacts.at(std::distance(contacts.begin(), it));
-        std::cout << "Contact not found, try again ('quit' to go back to main menu): ";
-        std::cin >> conCheck;
-    }
+    if (it != std::end(contacts))
+        return contacts.at(std::distance(contacts.begin(), it));
 
+    std::cout << "Contact not found. Returning to main menu...\n";
     return nullptr;
 }

@@ -15,7 +15,7 @@ void Contact::removeFriend(std::string_view friendName) {
                     m_friends.end());
 
     if (preSize == m_friends.size())
-        std::cout << "Friend not found\n";
+        std::cout << *m_name << ": Friend not found\n";
     else
-        std::cout << "Friend removed.\n";
+        std::cout << *m_name << ": Friend removed.\n";
 }
