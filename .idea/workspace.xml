@@ -23,10 +23,12 @@
     <list default="true" id="5ac4c129-afd0-4155-b22c-49646ee5eb2e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contact.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Contact.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactUtility.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ContactUtility.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+    </list>
+    <list id="1aeb41ed-0414-432b-b028-6d3fa3228b7b" name="Changes by vjda0" comment="">
       <change beforePath="$PROJECT_DIR$/ContactUtility.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ContactUtility.cpp" afterDir="false" />
     </list>
-    <list id="1aeb41ed-0414-432b-b028-6d3fa3228b7b" name="Changes by vjda0" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +40,20 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/ContactUtility.cpp">
+      <ranges>
+        <range start1="6" end1="7" start2="6" end2="7" changelist="5ac4c129-afd0-4155-b22c-49646ee5eb2e" />
+        <range start1="24" end1="24" start2="24" end2="30" changelist="1aeb41ed-0414-432b-b028-6d3fa3228b7b" />
+        <range start1="29" end1="30" start2="35" end2="36" changelist="5ac4c129-afd0-4155-b22c-49646ee5eb2e" />
+        <range start1="33" end1="34" start2="39" end2="40" changelist="5ac4c129-afd0-4155-b22c-49646ee5eb2e" />
+        <range start1="37" end1="40" start2="43" end2="43" changelist="5ac4c129-afd0-4155-b22c-49646ee5eb2e" />
+        <range start1="45" end1="51" start2="48" end2="50" changelist="5ac4c129-afd0-4155-b22c-49646ee5eb2e" />
+        <range start1="52" end1="65" start2="51" end2="56" changelist="5ac4c129-afd0-4155-b22c-49646ee5eb2e" />
+        <range start1="73" end1="74" start2="64" end2="65" changelist="5ac4c129-afd0-4155-b22c-49646ee5eb2e" />
+      </ranges>
+    </file>
   </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
@@ -69,17 +85,17 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "configurable.group.appearance",
+    "settings.editor.selected.configurable": "configurable.group.editor",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="Assignment3" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Assignment3" TARGET_NAME="Assignment3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Assignment3" RUN_TARGET_NAME="Assignment3">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Assignment3" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Assignment3" TARGET_NAME="Assignment3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Assignment3" RUN_TARGET_NAME="Assignment3">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -98,6 +114,7 @@
       <workItem from="1701398929000" duration="1505000" />
       <workItem from="1701414249051" duration="205000" />
       <workItem from="1701701026223" duration="18572000" />
+      <workItem from="1701806153732" duration="4516000" />
     </task>
     <servers />
   </component>
