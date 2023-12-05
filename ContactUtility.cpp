@@ -21,7 +21,12 @@ void ContactUtility::addContact(std::vector<Contact*>& contacts) {
 }
 
 void ContactUtility::printContacts(std::vector<Contact*>& contacts) {
+    sortContacts(contacts);
 
+    std::cout << "\n**Printing Sorted Contacts**\n";
+    for (const auto& contact : contacts) {
+        std::cout << "Name: " << *contact->m_name << ", Age: " << contact->m_age << "\n";
+    }
 }
 
 void ContactUtility::addFriend(std::vector<Contact*>& contacts) {
@@ -39,6 +44,30 @@ void ContactUtility::addFriend(std::vector<Contact*>& contacts) {
 
 void ContactUtility::printFriends(std::vector<Contact*>& contacts) {
 
+    std::cout << "Enter the name of the contact whose friend list you want to view: ";
+    std::string friendName;
+    std::cin >> friendName;
+
+    // Find the contact in the list
+    auto it = std::find_if(contacts.begin(), contacts.end(),
+                           [&friendName](Contact *c) { return *c->m_name == friendName; });
+
+    if (it == contacts.end()) {
+        std::cout << "Contact does not exist. Closing.\n";
+        return;
+    }
+
+    Contact* selectedContact = *it;
+    const auto& friends = selectedContact->m_friends;
+
+    if (friends.empty()) {
+        std::cout << friendName << " has no friends.\n";
+    } else {
+        std::cout << "\nFriends of " << friendName << ":\n";
+        for (const auto& friendContact : friends) {
+            std::cout << "   - " << *friendContact->m_name << "\n";
+        }
+    }
 }
 
 void ContactUtility::deleteContact(std::vector<Contact*>& contacts) {
