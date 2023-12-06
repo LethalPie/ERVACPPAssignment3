@@ -1,0 +1,19 @@
+# ninja log v5
+0	10	0	clean	5a346accd78202e1
+0	11	0	clean	5a346accd78202e1
+5	396	7234916274051892	CMakeFiles/Assignment3.dir/main.cpp.obj	fe772d994fd70912
+1	455	7234916274642379	CMakeFiles/Assignment3.dir/Contact.cpp.obj	94a07893a2290e7c
+12	589	7235121353509815	CMakeFiles/Assignment3.dir/main.cpp.obj	fe772d994fd70912
+4	617	7235121353789178	CMakeFiles/Assignment3.dir/Contact.cpp.obj	94a07893a2290e7c
+18	664	7235121354270559	CMakeFiles/Assignment3.dir/ContactUtility.cpp.obj	6004adeeeb2805ec
+664	899	7235121356589857	Assignment3.exe	d187dcbeea9da708
+4	557	7235131924697097	CMakeFiles/Assignment3.dir/ContactUtility.cpp.obj	6004adeeeb2805ec
+557	670	7235131925802125	Assignment3.exe	d187dcbeea9da708
+2	426	7235134388487540	CMakeFiles/Assignment3.dir/ContactUtility.cpp.obj	6004adeeeb2805ec
+426	527	7235134389452371	Assignment3.exe	d187dcbeea9da708
+4	483	7235136569605744	CMakeFiles/Assignment3.dir/ContactUtility.cpp.obj	6004adeeeb2805ec
+484	568	7235136570400379	Assignment3.exe	d187dcbeea9da708
+3	429	7235137731088508	CMakeFiles/Assignment3.dir/ContactUtility.cpp.obj	6004adeeeb2805ec
+430	516	7235137731923795	Assignment3.exe	d187dcbeea9da708
+5	793	7235140636809237	CMakeFiles/Assignment3.dir/ContactUtility.cpp.obj	6004adeeeb2805ec
+793	972	7235140638526994	Assignment3.exe	d187dcbeea9da708
